@@ -63,4 +63,7 @@ jobs:
           app-name: 'trailwebappsample'
           slot-name: 'Production'
           package: .
-          
+    
+      - name: Publish Whatif to Task Summary
+        run: |
+           steps.deploy-to-webapp.output >> $GITHUB_STEP_SUMMARY          
